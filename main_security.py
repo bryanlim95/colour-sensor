@@ -3,6 +3,7 @@ import tkinter.messagebox as box
 import random
 import time
 
+# Declaring Classes
 class Clock:
     def __init__(self):
         self.time1 = time.strftime('%H:%M:%S')
@@ -17,6 +18,7 @@ class Clock:
         self.watch.configure(text=self.time1)
         self.mFrame.after(200, self.changeLabel) #it'll call itself continuously
 
+# Encryption Algorithm 
 def des_encrypt(realText, step):
     outText = []
     uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -44,9 +46,6 @@ def des_encrypt(realText, step):
 
 step = 3
 
-# An input is requested and stored in a variable
-
-
 #Authentication
 
 dig = []
@@ -70,7 +69,7 @@ def dialog1():
         #time.sleep(2)
         window.destroy()
 
-
+# Designing the GUI
 
 window = Tk()
 window.title('Access Code')
